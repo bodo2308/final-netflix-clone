@@ -3,6 +3,8 @@ import styled from "styled-components";
 import HoverVideoPlayer from "react-hover-video-player";
 import { generateMedia } from "styled-media-query";
 
+
+
 const Card = ({ statement, index }) => {
   if (index === 1) {
     return (

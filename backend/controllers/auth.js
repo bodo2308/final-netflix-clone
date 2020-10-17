@@ -30,7 +30,7 @@ exports.login = (req, res, next) => {
       return bcrypt.compare(password, foundUserData.password);
     })
     .then((doMatch) => {
-      //if passwords do match
+      //if passwords do match assign the jwt token.
       if (doMatch) {
         token = jwt.sign(
           {

@@ -3,9 +3,12 @@ import axios from "../apis/axios";
 import requests from "../apis/requests";
 import "../css/Banner.css";
 
+// Top Banner Component
+
 const Banner = () => {
   const [movie, setMovie] = useState([]);
 
+  // Fetch a random movie in NetflixOriginal everytime user reload the page
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.fetchNetflixOriginals);

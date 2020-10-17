@@ -12,6 +12,7 @@ const API_KEY = "a8a0d2f2e6b1b160ecd9a360bf034913";
 const TV = () => {
   const [movies, setMovies] = useState([]);
 
+  // When page first laoded, set movie to null
   useEffect(() => {
     setMovies("");
   }, []);

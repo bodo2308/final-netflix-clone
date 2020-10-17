@@ -5,6 +5,8 @@ const initialState = {
   user: {},
 };
 
+// Auth reducer, set the user state according to the action type passed in 
+
 export function authReducer(state = initialState, action) {
   switch (action.type) {
     case authActions.STORE_USER:

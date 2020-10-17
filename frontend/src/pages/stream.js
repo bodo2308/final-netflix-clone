@@ -12,9 +12,13 @@ const API_KEY = "a8a0d2f2e6b1b160ecd9a360bf034913";
 const Stream = () => {
   const [movies, setMovies] = useState([]);
 
+  // When page first loaded, set movie to null
+
   useEffect(() => {
     setMovies("");
   }, []);
+
+  
 
   const onTermSubmit = async (term) => {
     const response = await axios.get(

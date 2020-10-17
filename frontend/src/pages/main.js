@@ -58,6 +58,7 @@ const Main = () => {
     },
   ]);
 
+  // toggle function
   const toggleFAQ = (index) => {
     setfaqs(
       faqs.map((faq, i) => {

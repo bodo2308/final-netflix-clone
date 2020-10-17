@@ -13,6 +13,8 @@ const Nav = ({ onFormSubmit }) => {
   const [show, handleShow] = useState(false);
   const dispatch = useDispatch();
 
+  // Make the nav change background when scroll to a certain point
+
   const changeBackground = () => {
     if (window.scrollY >= 80) {
       handleShow(true);
@@ -40,7 +42,7 @@ const Nav = ({ onFormSubmit }) => {
 
       <SearchBar onFormSubmit={onFormSubmit} />
 
-  
+      {/*Logout button, remove token from local storage when clicked on*/}
 
       <NavLink className="logOut-btn" to="/"  onClick={() => {
           dispatch(logOut());

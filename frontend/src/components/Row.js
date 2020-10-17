@@ -6,6 +6,8 @@ import YouTube from "react-youtube";
 const base_url = "https://image.tmdb.org/t/p/original";
 const API_KEY = "a8a0d2f2e6b1b160ecd9a360bf034913";
 
+//Render movie rows. Take fetched movie url as a prop and render each movie out 
+
 function Row({ title, fetchUrl, isLarge }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
@@ -29,6 +31,8 @@ function Row({ title, fetchUrl, isLarge }) {
       autoplay: 1,
     },
   };
+
+  // Set the trailerURL when clicked
 
   const handleClick = (movie) => {
     if (trailerUrl) {
@@ -77,6 +81,8 @@ function Row({ title, fetchUrl, isLarge }) {
           />
         ))}
       </div>
+
+      {/* Trailer player*/}
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
     </div>
   );

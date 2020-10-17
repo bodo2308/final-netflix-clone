@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import axios from "axios";
 import {storeUSER} from '../../redux/actions/authActions'
 
+// regular expression check for email format
 
 const regexp = RegExp(
   /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
@@ -75,8 +76,8 @@ class LoginForm extends Component {
 
     
     
-
-
+    // send axios request to backend, set jwt token in local storage
+    // pass the current user to the StoreUSER action creator
     axios
       .post("https://netflix-clone-nathan.herokuapp.com/auth/login", {
         email: this.state.email,
@@ -142,9 +143,10 @@ class LoginForm extends Component {
 }
 
 const mapStateToProps = (state) => {
-
+  // return state as prop for the LoginForm compoent
   return state.auth ; 
 };
+
 
 export default connect(mapStateToProps, {storeUSER})(
   withRouter(LoginForm)
