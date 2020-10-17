@@ -1,0 +1,33 @@
+.MovieRow {
+  margin-left: 20;
+}
+
+.MovieRow_Posters {
+  display: flex;
+
+  flex-shrink: 0;
+  flex-grow: 4;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.MovieRow_Poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 150px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+
+.MovieRow_Poster:hover {
+  transform: scale(1.08);
+}
+
+.MovieRow_PosterLarge {
+  max-height: 250px;
+}
+
+.MovieRow_PosterLarge:hover {
+  transform: scale(1.09);
+}
