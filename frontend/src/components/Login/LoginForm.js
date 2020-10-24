@@ -91,6 +91,15 @@ class LoginForm extends Component {
           
           console.log(res);
           this.props.history.push("/stream");
+        } else {
+          const errors = {
+            emailError: "",
+            passwordError: "",
+          };
+          errors.emailError = "Email or Password Incorrect";
+          this.setState({
+            ...errors,
+          });
         }
       })
       .catch((err) => console.log(err));
